@@ -93,7 +93,7 @@
 	container.newversion:Hide()
 	
 	container.forumlink:SetScript('OnShow', function()
-        this:SetText'https://github.com/zetone/enemyFrames'
+        this:SetText'https://github.com/bosnThs/enemyFrames'
 		
 		if ENEMYFRAMESVERSIONFOUND then
 			container.newversion:SetText('|cffffff00( !ver '..ENEMYFRAMESNEWVERSION..' available! )')

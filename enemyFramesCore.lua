@@ -395,6 +395,7 @@ function ENEMYFRAMECOREUpdateFlagCarriers(fc)
 	
 	refreshUnits = true
 	--PVPMAPUpdateFlagCarrier(fc)	--blizz already does this now
+	RAIDFRAMEUpdateFlagCarrier(fc)
 	TARGETFRAMEsetFC(fc)
 	WSGUIupdateFC(fc)
 	WSGHANDLERsetFlagCarriers(fc)

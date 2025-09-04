@@ -30,6 +30,7 @@ UIElements\incomingSpells.lua
 UIElements\pvpmap.lua
 UIElements\scoreBoard.lua
 UIElements\wsgUI.lua
+UIElements\raidFrames.lua
 
 enemyFrames.lua
 enemyFramesCore.lua

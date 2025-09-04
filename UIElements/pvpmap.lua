@@ -1,7 +1,7 @@
 	-------------------------------------------------------------------------------	
 	local blipTexture = [[Interface\addons\enemyFrames\globals\resources\blips\blip]]
 	local minimapTableBlips 	= {{'BattlefieldMinimapParty', 16, MAX_PARTY_MEMBERS}, {'BattlefieldMinimapRaid', 16, MAX_RAID_MEMBERS}}
-	local worldMapTableBlips 	= {{'WorldMapRaid', 19, MAX_RAID_MEMBERS}, {'WorldMapParty', 19, MAX_PARTY_MEMBERS}}
+	local worldMapTableBlips 	= {{'WorldMapParty', 19, MAX_PARTY_MEMBERS}, {'WorldMapRaid', 19, MAX_RAID_MEMBERS} }
 	-------------------------------------------------------------------------------
 	local icon, name, color, flagCarrier, flagTex
 	local skinBlip = function(blip, size)

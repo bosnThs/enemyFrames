@@ -81,13 +81,13 @@ end
 
 local removeCast = function(a_caster)
 	if castsList[a_caster] then
-		castsList[a_caster].timeEnd = castsList[a_caster].timeEnd - 1000
+		castsList[a_caster].timeEnd = castsList[a_caster].timeStart
 	end
 end
 
 local removeChanneledCast = function(a_source, a_dest, a_spell)
 	if castsList[a_caster] and castsList[a_caster].target == a_dest and castsList[a_caster].spell == a_spell then
-		castsList[a_caster].timeEnd = castsList[a_caster].timeEnd - 1000
+		castsList[a_caster].timeEnd = castsList[a_caster].timeStart
 		parsingCheck(false, true)
 	end
 end
@@ -119,7 +119,7 @@ end
 
 local removeBuff = function(a_source, a_dest, a_spell)
 	if buffsList[a_dest] and buffsList[a_dest][a_spell] then
-		buffsList[a_dest][a_spell].timeEnd = buffsList[a_dest][a_spell].timeEnd - 1000
+		buffsList[a_dest][a_spell].timeEnd = buffsList[a_dest][a_spell].timeStart
 	end
 end
 ----------------------------------------------------------------------------
