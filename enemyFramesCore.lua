@@ -394,7 +394,7 @@ function ENEMYFRAMECOREUpdateFlagCarriers(fc)
 	end
 	
 	refreshUnits = true
-	--PVPMAPUpdateFlagCarrier(fc)	--blizz already does this now
+	PVPMAPUpdateFlagCarrier(fc)	--blizz already does this now
 	RAIDFRAMEUpdateFlagCarrier(fc)
 	TARGETFRAMEsetFC(fc)
 	WSGUIupdateFC(fc)
@@ -523,7 +523,6 @@ local function enemyFramesCoreOnUpdate()
 	end
 end
 
-
 local function initializeValues()
 	insideBG = false
 	playerFaction = UnitFactionGroup('player')
@@ -577,7 +576,6 @@ f:RegisterEvent'PLAYER_ENTERING_WORLD'
 f:RegisterEvent'ZONE_CHANGED_NEW_AREA'
 f:RegisterEvent'RAID_ROSTER_UPDATE'
 f:RegisterEvent'UNIT_HEALTH'
-
 
 f:SetScript('OnEvent', eventHandler)
 

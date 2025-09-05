@@ -2,15 +2,14 @@
 	local addFlagIcon = function(raidIndexButton, flagTex)
 		if raidIndexButton then
 			raidIndexButton.flagFrame = CreateFrame('Frame', nil, raidIndexButton)
-			raidIndexButton.flagFrame:SetFrameLevel(2)
-			raidIndexButton.flagFrame.flagIcon = raidIndexButton:CreateTexture(nil, 'OVERLAY')
+			raidIndexButton.flagFrame:SetFrameLevel(80)
+			raidIndexButton.flagFrame.flagIcon = raidIndexButton.flagFrame:CreateTexture(nil, 'OVERLAY')
 			raidIndexButton.flagFrame.flagIcon:SetWidth(24) raidIndexButton.flagFrame.flagIcon:SetHeight(24)
-			raidIndexButton.flagFrame.flagIcon:SetPoint('CENTER', raidIndexButton)
+			raidIndexButton.flagFrame.flagIcon:SetPoint('CENTER', raidIndexButton, 0, -4)
 			raidIndexButton.flagFrame.flagIcon:SetTexture(flagTex)
 			raidIndexButton.flagFrame:Show()
 		end
 	end
-	
 	-------------------------------------------------------------------------------
 	local hideFlagIcons = function()
 		for i=1, NUM_RAID_PULLOUT_FRAMES do

@@ -145,6 +145,7 @@
 	end
 	-------------------------------------------------------------------------------
 	WSGUIefcLowHealthWarningAntiSpam = function()	--anti-spam efc low health warning
+		local now = GetTime()
 		nextAnnouncement = now + timeInterval
 	end
 	-------------------------------------------------------------------------------

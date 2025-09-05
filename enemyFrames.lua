@@ -260,8 +260,8 @@ for i = 1, unitLimit,1 do
 	units[i] = CreateEnemyUnitFrame('enemyFrameUnit'..i, enemyFrame)
 	units[i].index = i
 	
-	units[i]:SetAttribute("type1", "macro")
-	units[i]:SetAttribute("type2", "macro")
+	--units[i]:SetAttribute("type1", "macro")
+	--units[i]:SetAttribute("type2", "macro")
 	
 	--[[
 	units[i]:SetScript('OnClick', function()	
@@ -605,8 +605,9 @@ local function drawUnits(list)
 		--units[i].tar = v['name']
 		
 		--replacement for targetbyname(PROTECTED) with secure button
+		units[i]:SetAttribute("type1", "macro")
 		units[i]:SetAttribute("macrotext1", '/targetexact ' .. v['name'])
-		units[i]:SetAttribute("macrotext2", '/focus ' .. v['name'])		-- don't work for now
+		--units[i]:SetAttribute("macrotext2", '/focus ' .. v['name'])		-- don't work for now
 		
 		-- target count
 		units[i].targetCount.text:SetText(v['targetcount'] and (v['targetcount'] > 0 and v['targetcount'] or '') or '')
