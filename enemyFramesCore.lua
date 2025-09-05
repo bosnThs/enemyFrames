@@ -148,7 +148,7 @@ local function verifyUnitInfo(unit) --/run print(UnitIsPlayer('target') and 'tru
 				if not buff then break end		
 				
 				local buffData = SPELLINFO_BUFFS_TO_TRACK[buff]
-				if buffData and buffData['prio'] and buffData['prio'] > 0 then --and duration > 0 then				
+				if buffData and buffData['prio'] and buffData['prio'] > 0 and duration > 0 then				
 					local buffEntry = {}
 					buffEntry.buff 		= buff
 					buffEntry.icon 		= icon--buffData['icon']
