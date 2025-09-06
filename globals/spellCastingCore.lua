@@ -231,10 +231,10 @@ end
 
 local function sortPriobuff(tab, e)
 	for k, v in pairs(tab) do
-		if e.prio > v.prio then	
+		if (e.prio > v.prio) or (e.prio == v.prio and e.timeEnd < v.timeEnd) then	
 			table.insert(tab, k, e)
 			return tab
-		end
+		end 		
 	end
 	table.insert(tab, e)
 	return tab
