@@ -41,6 +41,7 @@ ENEMYFRAMESPLAYERDATA =
 	['targetCounter']			= false,
 	-- nameplates
 	['nameplatesClassColor'] 	= true,
+	['nameplatesCastbarText'] 	= true,
 	['nameplatesdebuffs'] 		= true,
 	['nameplatesCastbar']		= true,
 	['plateDebuffSize']			= 1,
