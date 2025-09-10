@@ -38,10 +38,10 @@
 	container.scaleSlider = CreateFrame('Slider', 'enemyFramesScaleSlider', container, 'OptionsSliderTemplate')
 	container.scaleSlider:SetWidth(215) 	container.scaleSlider:SetHeight(14)
 	container.scaleSlider:SetPoint('LEFT', container.scale, 'LEFT', 0, -30)
-	container.scaleSlider:SetMinMaxValues(0.8, 1.5)
+	container.scaleSlider:SetMinMaxValues(0.8, 2.0)
 	container.scaleSlider:SetValueStep(.05)
 	_G[container.scaleSlider:GetName()..'Low']:SetText'0.8'
-	_G[container.scaleSlider:GetName()..'High']:SetText'1.5'
+	_G[container.scaleSlider:GetName()..'High']:SetText'2.0'
 
 
 	container.scaleSlider:SetScript('OnValueChanged', function() 

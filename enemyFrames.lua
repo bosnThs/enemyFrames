@@ -599,7 +599,7 @@ local function drawUnits(list)
 		end
 				
 		--units[i].name:SetText(v['name'])
-		units[i].name:SetText(string.sub(v['name'], 1, 7))
+		units[i].name:SetText(string.sub(v['name'], 1, 9))
 		
 		-- button function to target unit
 		--units[i].tar = v['name']

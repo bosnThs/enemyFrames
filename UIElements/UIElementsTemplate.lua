@@ -86,7 +86,7 @@
 		--------------
 
 		this.name = this:CreateFontString(nil, 'OVERLAY')
-		this.name:SetFont(STANDARD_TEXT_FONT, 11, 'OUTLINE')
+		this.name:SetFont(STANDARD_TEXT_FONT, 10, 'OUTLINE')
 		this.name:SetTextColor(.8, .8, .8, .8)
 		this.name:SetPoint('CENTER', this.hpbar)	
 		--this.name:SetPoint('RIGHT', this.hpbar, -2, 0)
