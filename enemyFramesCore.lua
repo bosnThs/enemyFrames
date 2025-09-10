@@ -545,7 +545,6 @@ local function initializeValues()
 		bindingsInit()
 		INCOMINGSPELLSinit(true)--insideBG)
 		WSGUIinit(insideBG)
-		RAIDFRAMEhideFlagIcons()	--hide raidframe flag icon at start
 	else
 		f:UnregisterEvent'UPDATE_BATTLEFIELD_SCORE'
 		-- nil value to disable ui elements
@@ -566,6 +565,7 @@ local function eventHandler()
 			end
 		end	
 	elseif event == 'RAID_ROSTER_UPDATE' then
+		RAIDFRAMEhideFlagIcons()	--hide raidframe flag icon at start
 		sendMSG('AV', ENEMYFRAMESVERSION, nil, insideBG)
 	elseif event == 'UNIT_HEALTH' then
 		WSGUIupdateFChealth(arg1)
