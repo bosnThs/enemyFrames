@@ -46,4 +46,7 @@
 		hideFlagIcons()
 		drawFlagIcon(flagCarrier, flagTex)
 	end
+	RAIDFRAMEhideFlagIcons = function()
+		hideFlagIcons()
+	end
 	-------------------------------------------------------------------------------	

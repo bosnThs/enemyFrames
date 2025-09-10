@@ -545,6 +545,7 @@ local function initializeValues()
 		bindingsInit()
 		INCOMINGSPELLSinit(true)--insideBG)
 		WSGUIinit(insideBG)
+		RAIDFRAMEhideFlagIcons()	--hide raidframe flag icon at start
 	else
 		f:UnregisterEvent'UPDATE_BATTLEFIELD_SCORE'
 		-- nil value to disable ui elements
