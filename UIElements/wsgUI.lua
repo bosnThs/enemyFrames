@@ -126,8 +126,8 @@
 						--print('EFC has less than '..healthWarnings[i]..'%! Get ready to cap!')
 						local msgb = flagCarriers[x] and ' Get ready to cap!' or ''
 						SendChatMessage('EFC has less than '..healthWarnings[i]..'% Health!'.. msgb, 'BATTLEGROUND')
+						sendMSG('EFCHW', '', nil, true)
 						sentAnnoucement = true
-						sendMSG('EFCHW', '', nil, insideBG)
 					end
 					return
 				end

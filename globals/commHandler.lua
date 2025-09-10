@@ -86,7 +86,7 @@
 				raidTarget()
 			-- EFC health Warning
 			elseif  arg1 == msgPrefix['EFCHW']  then
-				WSGUIefcLowHealthWarningAntiSpam()	
+				WSGUIefcLowHealthWarningAntiSpam()
 			-- seen EFC
 			elseif  arg1 == msgPrefix['EFC']  then
 				efc()			
