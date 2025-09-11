@@ -40,6 +40,8 @@
 			if flagCarriers['Alliance'] or  flagCarriers['Horde'] then
 				sendMSG('EFC', fcTemp['Alliance'], fcTemp['Horde'], true)
 			end
+			
+			RAIDFRAMEUpdateFlagCarrier(flagCarriers)		-- update icon to appropriate frame
 		end
 	end
 	-------------------------------------------------------------------------------

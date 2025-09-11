@@ -12,6 +12,7 @@
 	end
 	-------------------------------------------------------------------------------
 	local hideFlagIcons = function()
+		if not NUM_RAID_PULLOUT_FRAMES then return end
 		for i=1, NUM_RAID_PULLOUT_FRAMES do
 			local frame = _G["RaidPullout"..i]
 			for j=1, frame.numPulloutButtons do

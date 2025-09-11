@@ -565,7 +565,7 @@ local function eventHandler()
 			end
 		end	
 	elseif event == 'RAID_ROSTER_UPDATE' then
-		RAIDFRAMEhideFlagIcons()	--hide raidframe flag icon at start
+		if not insideBG then RAIDFRAMEhideFlagIcons()	end		--hide raidframe flag icon at start			
 		sendMSG('AV', ENEMYFRAMESVERSION, nil, insideBG)
 	elseif event == 'UNIT_HEALTH' then
 		WSGUIupdateFChealth(arg1)
@@ -577,7 +577,6 @@ f:RegisterEvent'PLAYER_ENTERING_WORLD'
 f:RegisterEvent'ZONE_CHANGED_NEW_AREA'
 f:RegisterEvent'RAID_ROSTER_UPDATE'
 f:RegisterEvent'UNIT_HEALTH'
-
 f:SetScript('OnEvent', eventHandler)
 
 SLASH_ENEMYFRAMECORE1 = '/efc'
