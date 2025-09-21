@@ -1,14 +1,16 @@
 	-------------------------------------------------------------------------------	
 	local blipTexture = [[Interface\addons\enemyFrames\globals\resources\blips\blip]]
 	local minimapTableBlips 	= {{'BattlefieldMinimapParty', 16, MAX_PARTY_MEMBERS}, {'BattlefieldMinimapRaid', 16, MAX_RAID_MEMBERS}}
-	local worldMapTableBlips 	= {{'WorldMapParty', 19, MAX_PARTY_MEMBERS}, {'WorldMapRaid', 19, MAX_RAID_MEMBERS} }
+	local worldMapTableBlips 	= {{'WorldMapParty', 18, MAX_PARTY_MEMBERS}, {'WorldMapRaid', 18, MAX_RAID_MEMBERS} }
 	-------------------------------------------------------------------------------
 	local icon, name, color, flagCarrier, flagTex
 	local skinBlip = function(blip, size)
 		if ENEMYFRAMESPLAYERDATA['pvpmapblips'] then
 			icon = _G[blip:GetName()..'Icon']
 			if not blip.unit then return end
-			name = blip.name or UnitName(blip.unit)			
+			if not UnitExists(blip.unit) then return end
+			name = blip.name or UnitName(blip.unit)
+			
 			
 			blip:SetHeight(size)	blip:SetWidth(size)			
 			if string.find(blip.unit, 'raid') then--GetNumRaidMembers() > 0 then
@@ -25,6 +27,8 @@
 			if color then
 				icon:SetVertexColor(color.r, color.g, color.b)
 			end
+			
+			--print(UnitName(blip.unit) .. ' class ' .. class)
 			
 			if  name == flagCarrier then
 				icon:SetTexture(flagTex)
@@ -86,6 +90,7 @@
 	local f = CreateFrame('Frame', nil, WorldMapFrame)
 	f:RegisterEvent'ADDON_LOADED'
 	f:RegisterEvent'RAID_ROSTER_UPDATE'
+	f:RegisterEvent'PARTY_MEMBERS_CHANGED'
 	f:RegisterEvent'ZONE_CHANGED_NEW_AREA'
 	f:SetScript('OnEvent', eventHandler)
 	-------------------------------------------------------------------------------

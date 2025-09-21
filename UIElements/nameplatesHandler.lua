@@ -91,7 +91,7 @@
 			plate.castBar.timer = plate.castBar:CreateFontString(nil, 'OVERLAY')
 			plate.castBar.timer:SetTextColor(1, 1, 1)
 			plate.castBar.timer:SetFont(STANDARD_TEXT_FONT, 9) --, 'OUTLINE')
-			plate.castBar.timer:SetPoint('RIGHT', plate.castBar, -1, 0)
+			plate.castBar.timer:SetPoint('RIGHT', plate.castBar, -3, 0)
 					
 			plate.castBar.iconborder = CreateFrame('Frame', nil, plate.castBar)
 			plate.castBar.iconborder:SetWidth(12) plate.castBar.iconborder:SetHeight(12)

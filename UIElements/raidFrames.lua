@@ -2,7 +2,7 @@
 	local addFlagIcon = function(raidIndexButton, flagTex)
 		if raidIndexButton then
 			raidIndexButton.flagFrame = CreateFrame('Frame', nil, raidIndexButton)
-			raidIndexButton.flagFrame:SetFrameLevel(80)
+			raidIndexButton.flagFrame:SetFrameLevel(90)
 			raidIndexButton.flagFrame.flagIcon = raidIndexButton.flagFrame:CreateTexture(nil, 'OVERLAY')
 			raidIndexButton.flagFrame.flagIcon:SetWidth(24) raidIndexButton.flagFrame.flagIcon:SetHeight(24)
 			raidIndexButton.flagFrame.flagIcon:SetPoint('CENTER', raidIndexButton, 0, -4)
@@ -21,7 +21,8 @@
 			end
 		end
 	end
-	local drawFlagIcon = function(flagCarrier, flagTex)	
+	local drawFlagIcon = function(flagCarrier, flagTex)
+		if not NUM_RAID_PULLOUT_FRAMES then return end	
 		for i=1, NUM_RAID_PULLOUT_FRAMES do
 			local frame = _G["RaidPullout"..i]
 			for j=1, frame.numPulloutButtons do

@@ -200,6 +200,8 @@ end
 
 SPELLCASTINGCOREgetCast = function(a_caster)
 	if not a_caster then return nil end
+	local currentTime = GetTime()
+	if castsList[a_caster] and castsList[a_caster].timeEnd < currentTime then  return nil end
 	return castsList[a_caster]
 end
 
